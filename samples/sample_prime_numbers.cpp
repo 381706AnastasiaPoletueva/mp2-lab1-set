@@ -59,6 +59,7 @@ int main()
   cout << field << endl;
 }
 
+#else
 
 #include "tset.h"
 
