@@ -6,6 +6,7 @@
 // Тестирование битового поля и множества
 
 #include <iomanip>
+#include <iostream>
 
 // #define USE_SET // Использовать класс TSet,
                 // закоментировать, чтобы использовать битовое поле
@@ -16,7 +17,7 @@
 
 int main()
 {
-  int n, m, k, count;
+  int n, m, k, count, r;
 
   setlocale(LC_ALL, "Russian");
   cout << "Тестирование программ поддержки битового поля" << endl;
@@ -49,8 +50,15 @@ int main()
     }
   cout << endl;
   cout << "В первых " << n << " числах " << count << " простых" << endl;
+  cout << "Ввод битового поля" << endl;
+  cout << "Введите размер битового поля" << endl;
+  cin >> r;
+  TBitField field(r);
+  cin >> field;
+  cout << "Вывод битового поля" << endl;
+  cout << field << endl;
 }
-#else
+
 
 #include "tset.h"
 
